@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Programming Survey</title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+      body{
+        background: linear-gradient(45deg, #6E6E6E, #2E2E2E);
+        font-family: 'Roboto', sans-serif;
+        color: white;
+      }
+
+      #title{
+        text-align: center;
+        margin-top: 20px;
+        padding-top: 20px;
+      }
+
+      .input_field{
+        width: 80%;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        font-size: 15px;
+      }
+
+      #dropdown{
+        border-radius: 5px;
+        border: none;
+        width: 25%;
+        height: 40px;
+        padding-left: 10px;
+      }
+
+      #description{
+        text-align: center;
+      }
+
+      .container{
+        display: block;
+        margin: auto;
+        background: hsla(0, 0%, 60%, 30%);
+        width: 40%;
+        border-radius: 10px;
+      }
+
+      #survey-form{
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 20px;
+
+      }
+
+      .select_form{
+        margin: 10px;
+        padding: 10px;
+      }
+
+      #text-area{
+        border-radius: 5px;
+        font-size: 20px;
+      }
+
+      #submit{
+        width: 80%;
+        height: 40px;
+        background-color: green;
+        color: white;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+
+      .submit{
+        text-align: center;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">Programming Survey</h1>
+      <p id="description">A little survey about some programming stuff</p>
+      <form id="survey-form" action="survey.html" method="post">
+        <label for="name" id="name-label">Name</label> <br><br>
+        <input class="input_field" type="text" id="name" name="" placeholder="  Enter your name" required>
+        <br><br><br>
+        <label for="email" id="email-label">E-Mail</label> <br><br>
+        <input class="input_field" type="email" id="email" name="" placeholder="  Enter your E-Mail" required>
+        <br><br><br>
+        <label for="number" id="number-label">Age</label> <br><br>
+        <input class="input_field" type="number" id="number" name="" min="1" max="100" placeholder="  Enter your age" required>
+        <br><br><br>
+        <label for="dropdown">What is your favourite programming language?</label> <br><br>
+        <select id="dropdown" name="">
+          <option value="python">Python</option>
+          <option value="java-script">JavaScript</option>
+          <option value="java">Java</option>
+          <option value="c++">C++</option>
+          <option value="c#">C#</option>
+          <option value="c">C</option>
+          <option value="php">PHP</option>
+          <option value="sql">SQL</option>
+          <option value="swift">Swift</option>
+          <option value="visual-basic">Visual Basic</option>
+        </select>
+        <br><br>
+
+        <label for="ide_select">Which is your favourite IDE/Text Editor?</label> <br>
+        <fieldset class="select_form" id="ide_select">
+          <input type="radio" id="vs" name="ide" value="Visual Studio">
+          <label for="vs">Visual Studio</label> <br>
+
+          <input type="radio" id="intellij_idea" name="ide" value="IntelliJ IDEA">
+          <label for="intellij_idea">IntelliJ IDEA</label> <br>
+
+          <input type="radio" id="pycharm" name="ide" value="PyCharm">
+          <label for="pycharm">PyCharm</label> <br>
+          <br>
+          <input type="radio" id="atom" name="txt-editor" value="Atom">
+          <label for="atom">Atom</label> <br>
+
+          <input type="radio" id="vsc" name="txt-editor" value="Visual Studio Code">
+          <label for="vsc">Visual Studio Code</label> <br>
+
+          <input type="radio" id="sublime" name="txt-editor" value="Sublime Text">
+          <label for="sublime">Sublime Text</label> <br>
+        </fieldset>
+        <br><br>
+
+        <label for="things-to-learn">Which of these programming related things you want to learn about?</label>
+        <fieldset class="select_form" id="things-to-learn">
+          <input type="checkbox" id="ds" value="Data Science">
+          <label for="ds">Data Science</label> <br>
+
+          <input type="checkbox" id="ml" value="Machine learning">
+          <label for="ml">Machine learning</label> <br>
+
+          <input type="checkbox" id="web-dev" value="Web Dev">
+          <label for="web-dev">Web Dev</label> <br>
+
+          <input type="checkbox" id="full-stack" value="Full Stack">
+          <label for="full-stack">Full Stack Dev</label> <br>
+
+          <input type="checkbox" id="data-base" value="Data Bases">
+          <label for="data-base">Data Bases</label> <br>
+
+          <input type="checkbox" id="cyber" value="Cyber Security">
+          <label for="cyber">Cyber Security</label> <br>
+
+          <input type="checkbox" id="game-dev" value="Game Dev">
+          <label for="game-dev">Game Dev</label> <br>
+        </fieldset>
+        <br><br>
+
+        <label for="programming-languages">Which programming languages do you want to learn?</label>
+        <fieldset class="select_form" id="programming-languages">
+          <input type="checkbox" id="python" value="Python">
+          <label for="python">Python</label> <br>
+
+          <input type="checkbox" id="html/css" value="HTML/CSS">
+          <label for="html/css">HTML/CSS</label> <br>
+
+          <input type="checkbox" id="c#" value="C#">
+          <label for="c#">C#</label> <br>
+
+          <input type="checkbox" id="c++" value="C++">
+          <label for="c++">C++</label> <br>
+
+          <input type="checkbox" id="c" value="C">
+          <label for="c">C</label> <br>
+
+          <input type="checkbox" id="javascript" value="JavaScript">
+          <label for="javascript">JavaScript</label> <br>
+
+          <input type="checkbox" id="java" value="Java">
+          <label for="java">Java</label> <br>
+
+          <input type="checkbox" id="php" value="PHP">
+          <label for="php">PHP</label> <br>
+        </fieldset>
+        <br>
+
+        <label for="text-area">Anything else to add?</label> <br><br>
+        <textarea id="text-area"name="text" rows="12" cols="60"></textarea>
+        <br><br>
+        <div class="submit">
+          <input id="submit" type="submit" name="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
